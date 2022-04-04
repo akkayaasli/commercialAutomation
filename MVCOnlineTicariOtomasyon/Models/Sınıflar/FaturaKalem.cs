@@ -22,6 +22,7 @@ namespace MVCOnlineTicariOtomasyon.Models.Sınıflar
 
         public decimal Tutar { get; set; }
 
-        public Faturalar Faturalar { get; set; }
+        public int Faturaid { get; set; }
+        public virtual Faturalar Faturalar { get; set; }
     }
 }
