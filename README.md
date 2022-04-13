@@ -1,2 +1,2 @@
 # commercialAutomationWork
-# ENTITY FRAMEWORK İLE ÇALIŞILDI
+# ENTITY FRAMEWORK 
