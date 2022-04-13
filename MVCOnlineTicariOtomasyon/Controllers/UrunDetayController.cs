@@ -12,7 +12,11 @@ namespace MVCOnlineTicariOtomasyon.Controllers
         // GET: UrunDetay
         public ActionResult Index()
         {
-            return View();
+            Class2 cs = new Class2();
+            cs.Deger1 = c.Uruns.Where(x => x.Urunid == 2).ToList();
+            cs.Deger2 = c.Detays.Where(x => x.DetayID == 2).ToList();
+            
+            return View(cs);
         }
     }
 }
