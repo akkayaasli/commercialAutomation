@@ -156,6 +156,8 @@
     <Compile Include="Models\Sınıflar\Kategori.cs" />
     <Compile Include="Models\Sınıflar\Personel.cs" />
     <Compile Include="Models\Sınıflar\SatisHareket.cs" />
+    <Compile Include="Models\Sınıflar\SinifGrup.cs" />
+    <Compile Include="Models\Sınıflar\SinifGrup2.cs" />
     <Compile Include="Models\Sınıflar\Urun.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -2552,6 +2554,8 @@
     <Content Include="Views\Istatistik\Index.cshtml" />
     <Content Include="Views\Galeri\Index.cshtml" />
     <Content Include="Views\UrunDetay\Index.cshtml" />
+    <Content Include="Views\Istatistik\KolayTablolar.cshtml" />
+    <Content Include="Views\Istatistik\Partial1.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
