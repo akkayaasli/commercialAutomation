@@ -130,16 +130,19 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CariController.cs" />
+    <Compile Include="Controllers\CariPanelController.cs" />
     <Compile Include="Controllers\DepartmanController.cs" />
     <Compile Include="Controllers\FaturaController.cs" />
     <Compile Include="Controllers\GaleriController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IstatistikController.cs" />
     <Compile Include="Controllers\KategoriController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\PersonelController.cs" />
     <Compile Include="Controllers\SatisController.cs" />
     <Compile Include="Controllers\UrunController.cs" />
     <Compile Include="Controllers\UrunDetayController.cs" />
+    <Compile Include="Controllers\YapilacakController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -160,6 +163,7 @@
     <Compile Include="Models\Sınıflar\SinifGrup2.cs" />
     <Compile Include="Models\Sınıflar\SinifGrup3.cs" />
     <Compile Include="Models\Sınıflar\Urun.cs" />
+    <Compile Include="Models\Sınıflar\Yapilacak.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -2420,6 +2424,33 @@
     <Content Include="AdminLTE-3.0.4\plugins\sweetalert2-theme-bootstrap-4\bootstrap-4.scss" />
     <Content Include="AdminLTE-3.0.4\plugins\toastr\toastr.js.map" />
     <Content Include="AdminLTE-3.0.4\README.md" />
+    <Content Include="weblogin\css\font-awesome.css" />
+    <Content Include="weblogin\css\popup-box.css" />
+    <Content Include="weblogin\css\style.css" />
+    <Content Include="weblogin\fonts\fontawesome-webfont.svg" />
+    <Content Include="weblogin\images\bg.jpg" />
+    <Content Include="weblogin\index.html" />
+    <Content Include="weblogin\js\jquery-2.1.4.min.js" />
+    <Content Include="weblogin\js\jquery.magnific-popup.js" />
+    <Content Include="weblogin\w3layouts-License.txt" />
+    <Content Include="webpanelticari\webpanel\.gitignore" />
+    <Content Include="webpanelticari\webpanel\css\simple-sidebar.css" />
+    <Content Include="webpanelticari\webpanel\gulpfile.js" />
+    <Content Include="webpanelticari\webpanel\index.html" />
+    <Content Include="webpanelticari\webpanel\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="webpanelticari\webpanel\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="webpanelticari\webpanel\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="webpanelticari\webpanel\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="webpanelticari\webpanel\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="webpanelticari\webpanel\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="webpanelticari\webpanel\vendor\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="webpanelticari\webpanel\vendor\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="webpanelticari\webpanel\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="webpanelticari\webpanel\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="webpanelticari\webpanel\vendor\jquery\jquery.js" />
+    <Content Include="webpanelticari\webpanel\vendor\jquery\jquery.min.js" />
+    <Content Include="webpanelticari\webpanel\vendor\jquery\jquery.slim.js" />
+    <Content Include="webpanelticari\webpanel\vendor\jquery\jquery.slim.min.js" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\DataTables\autoFill.bootstrap.js" />
     <Content Include="Scripts\DataTables\autoFill.bootstrap.min.js" />
@@ -2561,6 +2592,34 @@
     <Content Include="Views\Istatistik\Partial3.cshtml" />
     <Content Include="Views\Istatistik\Partial4.cshtml" />
     <Content Include="Views\Personel\PersonelListe.cshtml" />
+    <Content Include="Views\Yapilacak\Index.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="weblogin\fonts\fontawesome-webfont.eot" />
+    <Content Include="weblogin\fonts\fontawesome-webfont.ttf" />
+    <Content Include="weblogin\fonts\fontawesome-webfont.woff" />
+    <Content Include="weblogin\fonts\fontawesome-webfont.woff2" />
+    <Content Include="weblogin\fonts\FontAwesome.otf" />
+    <Content Include="Views\Login\Partial1.cshtml" />
+    <Content Include="webpanelticari\webpanel\.travis.yml" />
+    <Content Include="webpanelticari\webpanel\LICENSE" />
+    <Content Include="webpanelticari\webpanel\package-lock.json" />
+    <Content Include="webpanelticari\webpanel\package.json" />
+    <Content Include="webpanelticari\webpanel\README.md" />
+    <Content Include="webpanelticari\webpanel\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="webpanelticari\webpanel\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="webpanelticari\webpanel\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="webpanelticari\webpanel\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="webpanelticari\webpanel\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="webpanelticari\webpanel\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="webpanelticari\webpanel\vendor\bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="webpanelticari\webpanel\vendor\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="webpanelticari\webpanel\vendor\bootstrap\js\bootstrap.js.map" />
+    <Content Include="webpanelticari\webpanel\vendor\bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="webpanelticari\webpanel\vendor\jquery\jquery.min.map" />
+    <Content Include="webpanelticari\webpanel\vendor\jquery\jquery.slim.min.map" />
+    <Content Include="Views\Shared\_CariLayout.cshtml" />
+    <Content Include="Views\CariPanel\Index.cshtml" />
+    <Content Include="Views\CariPanel\Siparislerim.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
