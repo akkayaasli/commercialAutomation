@@ -9,9 +9,9 @@
 
 <table class="table table-bordered" style="margin-top:20px;">
     <tr>
-    
+
         <th>Seri Sıra No</th>
-     
+
         <th>Vergi Dairesi</th>
         <th>Tarih</th>
         <th>Saat</th>
@@ -20,48 +20,78 @@
         <th>Teslim Alan</th>
         <th>Güncelle</th>
         <th>Detaylar</th>
-        <th>Popup Liste</th>
+       
         <th>Yeni Kalem</th>
     </tr>
     @foreach (var k in Model)
     {
-    <tr>
+        <tr>
 
-        <td>@k.FaturaSeriNo @k.FaturaSıraNo</td>
+            <td>@k.FaturaSeriNo @k.FaturaSıraNo</td>
 
-        <td>@k.VergiDaire</td>
+            <td>@k.VergiDaire</td>
 
-        <td>@k.Tarih</td>
+            <td>@k.Tarih</td>
 
-        <td>@k.Saat</td>
+            <td>@k.Saat</td>
 
-        <td>@k.Toplam ₺</td>
+            <td>@k.Toplam ₺</td>
 
-        <td>@k.TeslimEden</td>
+            <td>@k.TeslimEden</td>
 
-        <td>@k.TeslimAlan</td>
+            <td>@k.TeslimAlan</td>
 
 
 
-        <td><a href="/Fatura/FaturaGetir/@k.Faturaid" class="btn btn-warning">GÜNCELLE</a></td>
+            <td><a href="/Fatura/FaturaGetir/@k.Faturaid" class="btn btn-warning">GÜNCELLE</a></td>
 
-        <td>
-            <a href="/Fatura/FaturaDetay/@k.Faturaid" class="btn btn-default"
-               style="background-color:lightcoral; color:whitesmoke">Detaylar</a>
-        </td>
+            <td>
+                <a href="/Fatura/FaturaDetay/@k.Faturaid" class="btn btn-default"
+                   style="background-color:lightcoral; color:whitesmoke">Detaylar</a>
+            </td>
 
-        <td>
-            <a href="/Fatura/FaturaDetay/@k.Faturaid" class="btn btn-default"
-               style="background-color:dodgerblue; color:whitesmoke">Popup</a>
-        </td>
+           
 
-        <td>
-            <a href="/Fatura/FaturaDetay/@k.Faturaid" class="btn btn-default"
-               style="background-color:thistle; color:whitesmoke">Kalem</a>
-        </td>
+            <td>
+                <a href="/Fatura/FaturaDetay/@k.Faturaid" class="btn btn-default"
+                   style="background-color:thistle; color:whitesmoke">Kalem</a>
+            </td>
 
-    </tr>
+        </tr>
     }
 </table>
 
 <a href="/Fatura/FaturaEkle" class="btn btn-info">Yeni Fatura Girişi</a>
+<br /><br />
+<button type="button" class="btn btn-warning" style="background-color:#d95151; color:white"
+        data-toggle="modal" data-target="#Modal1">
+    Popup Penceresi
+</button>
+
+<div class="modal" id="Modal1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Diyalog Ekranı</h2>
+            </div>
+            <div class="modal-body">
+                <table class="table table-bordered">
+                    <tr>
+                        <td>ID</td>
+                        <td>Seri No</td>
+                        <td>Sıra No</td>
+                    </tr>
+                    @foreach(var x in Model)
+                    {
+                        <tr>
+                            <td>@x.FaturaSeriNo</td>
+                            <td>@x.FaturaSıraNo</td>
+                            <td>@x.Toplam</td>
+                        </tr>
+                    }
+                </table>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Tamam</button>
+            </div>
+        </div>
+    </div>
+</div>
